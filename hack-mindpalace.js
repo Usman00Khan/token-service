@@ -1,4 +1,4 @@
-{
+module.exports = {
   "type": "service_account",
   "project_id": "hack-mindpalace",
   "private_key_id": "7f962d624de7779a33d17c054e0e50c966fcc620",

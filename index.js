@@ -1,13 +1,14 @@
 'use strict';
 
+var Config = require("./hack-mindpalace.js");
 const fs = require('fs');
-var Config = {};
+// var Config = {};
 
-const setup = async () => {
-  let rawdata = fs.readFileSync('.\\hack-mindpalace.json');
-  Config = JSON.parse(rawdata);
-  console.log(Config);
-}
+// const setup = async () => {
+//   let rawdata = fs.readFileSync('.\\hack-mindpalace.json');
+//   Config = JSON.parse(rawdata);
+//   console.log(Config);
+// }
 
 var express = require('express')
 const googleAuth = require('google-oauth-jwt');
@@ -35,7 +36,7 @@ app.all('/token', function(req, res, next) {
   next();
  });
  app.get('/token',  async (req, res,next) => {
-    await setup();
+    // await setup();
     let token = await getToken();
     res.send({ token });
 })

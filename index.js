@@ -4,7 +4,7 @@ const fs = require('fs');
 var Config = {};
 
 const setup = async () => {
-  let rawdata = fs.readFileSync('C:\\Users\\uk807\\Documents\\MAXON\\hack-mindpalace.json');
+  let rawdata = fs.readFileSync('.\\hack-mindpalace.json');
   Config = JSON.parse(rawdata);
   console.log(Config);
 }
@@ -40,4 +40,4 @@ app.all('/token', function(req, res, next) {
     res.send({ token });
 })
 
-app.listen(4000, () => console.log("listening on port 4000"));
+app.listen(4000, () => console.log("listening on port 6000"));
